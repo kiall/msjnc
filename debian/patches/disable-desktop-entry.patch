@@ -1,0 +1,45 @@
+Index: msjnc/msjnc
+===================================================================
+--- msjnc.orig/msjnc	2013-03-03 16:34:52.187477960 +0000
++++ msjnc/msjnc	2013-03-03 16:52:11.071435430 +0000
+@@ -1936,23 +1936,23 @@
+     }
+ 
+     # Make sure we have a FreeDesktop applicaton file, or create it
+-    my $deskdir = "$HOME/.local/share/applications";
+-    if (! -d $deskdir) {
+-        system(qw(mkdir -p), $deskdir);
+-        $? == 0 or die "Failed to create $deskdir\n";
+-    }
+-    my $deskfile = "$deskdir/ms-jnc.desktop";
+-    if (! -f $deskfile) {
+-        $_ = $DESKTOP;
+-        s/\@\@ICON\@\@/$JNCICON/gs;
+-        s/\@\@CMD\@\@/$0/gs;
+-        open(my $D, '>', $deskfile)
+-            or die "open: $deskfile: $!
+-Failed to create application definition.\n";
+-        print $D $_;
+-        close($D) or die "close: $deskfile: $!
+-Failed to create application definition.\n";
+-    }
++#     my $deskdir = "$HOME/.local/share/applications";
++#     if (! -d $deskdir) {
++#         system(qw(mkdir -p), $deskdir);
++#         $? == 0 or die "Failed to create $deskdir\n";
++#     }
++#     my $deskfile = "$deskdir/ms-jnc.desktop";
++#     if (! -f $deskfile) {
++#         $_ = $DESKTOP;
++#         s/\@\@ICON\@\@/$JNCICON/gs;
++#         s/\@\@CMD\@\@/$0/gs;
++#         open(my $D, '>', $deskfile)
++#             or die "open: $deskfile: $!
++# Failed to create application definition.\n";
++#         print $D $_;
++#         close($D) or die "close: $deskfile: $!
++# Failed to create application definition.\n";
++#     }
+ 
+     return 1;
+ }

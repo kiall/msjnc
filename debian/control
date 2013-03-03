@@ -1,0 +1,18 @@
+Source: msjnc
+Section: network
+Priority: extra
+Maintainer: Kiall Mac Innes <kiall@hp.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: https://github.com/madscientist/msjnc
+
+Package: msjnc
+Architecture: any
+Depends: libgtk2-perl,
+         libwww-perl,
+         zlib1g:i386,
+         ${perl:Depends},
+         ${misc:Depends}
+Description: MadScientist JNC Session Manager
+ This script manages the Juniper Network Connect VPN service. It is a
+ replacement for the HTML/Java based toolkit provided by Juniper.
